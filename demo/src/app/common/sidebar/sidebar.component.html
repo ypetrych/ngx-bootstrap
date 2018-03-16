@@ -16,7 +16,7 @@
     <ul class="sidebar-list">
       <li [routerLinkActive]="['active']"
           [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/{{routes[1].path}}">{{routes[1].data}}</a>
+        <a routerLink="./{{routes[1].path}}">{{routes[1].data}}</a>
       </li>
     </ul>
 
@@ -25,7 +25,7 @@
       <li *ngFor="let route of routes | slice:2 | SearchFilter:search.text"
           [routerLinkActive]="['active']"
           [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/{{route.path}}">{{route.data[0]}}</a>
+        <a routerLink="./{{route.path}}">{{route.data[0]}}</a>
       </li>
     </ul>
   </div>
